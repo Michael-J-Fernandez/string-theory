@@ -41,13 +41,13 @@ console.log(yellingChars("1234567"));
 
 
 
-// ----- indexChars -----
+// ----- indexedChars -----
 // adds the index of each character before that character in the given string
 console.log("\n");
-console.log("----- indexChars -----");
+console.log("----- indexedChars -----");
 
 
-function indexChars(str) {
+function indexedChars(str) {
 
     let newStr = "";
 
@@ -58,7 +58,7 @@ function indexChars(str) {
     return newStr;
 }
 
-console.log(indexChars("abcdefg"));
+console.log(indexedChars("abcdefg"));
 
 
 
@@ -92,8 +92,6 @@ console.log(exclaim("One. Two? Three. Four?"));
 
 // ----- truncate -----
 // shortens a long string to 15 characters plus an ellipsis (...)
-
-// PERSONAL NOTE: instructions for this assignment have been fulfilled, however the way my code is written on here, if str.length < 15, missing characters up until 15 will log "undefined"
 console.log("\n");
 console.log("----- truncate -----");
 
@@ -116,7 +114,7 @@ console.log(truncate("11111111111111111111111"));
 
 
 // ----- ciEmailify -----
-// returns the given sentence with every question mark or period changed to an exclamation point
+// creates an email from a two-part name
 console.log("\n");
 console.log("----- ciEmailify -----");
 
@@ -137,11 +135,11 @@ function ciEmailify(name) {
             eMail += name[i];
         }
     }
-    eMail += "@codeimmersives.com"
+    eMail += "@codeimmersives.com";
     return eMail;
 }
 
-console.log(ciEmailify("Michael J Fernandez de la Cruz"));
+console.log(ciEmailify("Michael Fernandez"));
 
 
 
@@ -152,10 +150,12 @@ console.log("\n");
 console.log("----- reverse -----");
 
 function reverse(str) {
-    newStr = " ";
+
+    newStr = "";
+
     for (i = str.length - 1; i >= 0; i--){
+        
         newStr += str[i];
-        // console.log(newStr);
     }
     return newStr
 }
@@ -193,4 +193,4 @@ function onlyVowels(str) {
     return newStr;
 }
 
-console.log(onlyVowels("GwAaGwEeGwIiGwOoGwUu"))
+console.log(onlyVowels("GwAaGwEeGwIiGwOoGwUu"));
